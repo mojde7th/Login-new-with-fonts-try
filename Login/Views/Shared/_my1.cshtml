@@ -1,0 +1,291 @@
+﻿
+
+@{ Layout = null; }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>سامانه دریافت فایل</title>
+     
+    <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+    @*<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>*@
+    <link rel="stylesheet" href="~/Styles/style6.css">
+
+</head>
+<body style="float:right; text-align:right">
+    <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
+    <!-- partial:index.partial.html -->
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+        <aside id="sidebar" class="sidebar break-point-lg has-bg-image">
+            @*<div class="image-wrapper">
+                <img src="~/images/f6.jpg" />
+            </div>*@
+            <div class="sidebar-layout">
+                <div class="sidebar-header" style="justify-content:center">
+                    <span style=" 
+                text-transform: uppercase;
+                font-size: 15px;
+                letter-spacing: 3px;
+                font-weight: bold;">فهرست</span>
+                </div>
+
+                <div class="sidebar-content">
+                    <nav class="menu open-current-submenu">
+                        <ul>
+                            <li class="menu-item sub-menu">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="zondicons:align-left"></span>
+                                    </span>
+                                    <span class="menu-title"> سایر </span>
+
+                                </a>
+
+
+                                <div class="sub-menu-list">
+                                    <ul>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">مشاهده </span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">دریافت</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item sub-menu">
+                                            <a href="#">
+                                                <span class="menu-title">فرم</span>
+                                            </a>
+                                            <div class="sub-menu-list">
+                                                <ul>
+                                                    <li class="menu-item">
+                                                        <a href="#">
+                                                            <span class="menu-title">ورودی</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#">
+                                                            <span class="menu-title">بیشتر</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item sub-menu">
+                                                        <a href="#">
+                                                            <span class="menu-title">موارد دیگر</span>
+                                                        </a>
+                                                        <div class="sub-menu-list">
+                                                            <ul>
+                                                                <li class="menu-item">
+                                                                    <a href="#">
+                                                                        <span class="menu-suffix">&#2928;</span>
+                                                                        <span class="menu-title">چک باکس</span>
+
+                                                                    </a>
+                                                                </li>
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+                            <li class="menu-item sub-menu" style="text-align:right">
+
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="fluent:dark-theme-20-filled"></span>
+                                    </span>
+                                    <span class="menu-title"> زمینه </span>
+
+                                </a>
+                                <div class="sub-menu-list">
+                                    <ul>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">روشن</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">تیره</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="entypo:documents"></span>
+                                    </span>
+
+                                    <span class="menu-title">اسناد</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="akar-icons:calendar"></span>
+                                    </span>
+
+                                    <span class="menu-title">تقویم</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="bi:info-circle"></span>
+                                    </span>
+                                    <span class="menu-title">نمونه و توضیحات</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="entypo:documents"></span>
+                                    </span>
+
+                                    <span class="menu-title">اسناد</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="@Url.Action("login","Account")">
+                                    <span class="menu-icon">
+                                        <span class="iconify" data-icon="gg:log-off"></span>
+                                    </span>
+
+                                    <span class="menu-title">خروج</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            
+            </div>
+        </aside>
+        <div id="overlay" class="overlay"></div>
+        <div class="layout">
+            <header class="header">
+                <a id="btn-collapse" href="#">
+                    <i class="ri-menu-line ri-xl"></i>
+                </a>
+                <a id="btn-toggle" href="#" class="sidebar-toggler break-point-lg">
+                    <i class="ri-menu-line ri-xl"></i>
+                </a>
+            </header>
+            <main class="content">
+                <h2 style="float:right;" >اکسل حقوق و اطلاعات پرسنلی</h2>
+                <div>
+                    <div class="warpper">
+                        <input class="radio" id="one" name="group" type="radio" checked>
+                        <input class="radio" id="two" name="group" type="radio">
+                        <input class="radio" id="three" name="group" type="radio">
+                        <div class="tabs">
+                            <label class="tab" id="one-tab" for="one">اطلاعات حقوق</label>
+                            <label class="tab" id="two-tab" for="two">اطلاعات پرسنلی</label>
+                            <label class="tab" id="three-tab" for="three">روند بارگذاری</label>
+                        </div>
+                        <div class="panels">
+                            <div class="panel" id="one-panel">
+                                <div class="panel-title"></div>
+
+                                <p>
+                                    در این صورت  پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد
+
+                                </p>
+                                @RenderBody()
+                            </div>
+                            <div class="panel" id="two-panel">
+                                <div class="panel-title"></div>
+                                <p>متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته</p>
+                            </div>
+                            <div class="panel" id="three-panel">
+                                <div class="panel-title"></div>
+                                <p> ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <h1>توضیحات</h1>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                        </p>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد
+                            <br />
+                            <a href="https://karmandiran.ir" target="_blank">کارمند ایران</a>
+                        </p>
+                        <div>
+                            <a href="https://karmandiran.ir" target="_blank">
+                                <img alt="" src="https://img.shields.io/badge/karmand-iran-lightgrey" style="align-content:center" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div dir="rtl" >
+
+                    <h2>مراحل</h2>
+
+                    <ul>
+                        <li>لورم ایپسوم متن </li>
+                        <li>ساختگی با تولید </li>
+                        <li> نامفهوم از صنعت چاپ </li>
+                        <li>استفاده از طراحان گرافیک</li>
+                    </ul>
+                </div>
+                <div dir="rtl">
+                    <h2>وب سایت‌های مرتبط</h2>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="karmandiran.ir">
+                                سامانه کارمند ایران
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href=""> سامانه آپلود فایل </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href=""> وزارت نفت</a>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="footer" dir="rtl">
+                    <small style="margin-bottom: 20px; display: inline-block">
+                        1400©
+                        <i class="fa-solid fa-user"></i>
+                        <a target="_blank" href="">   <i class="fa-solid fa-user"></i>       سامانه دریافت فایل </a>
+                    </small>
+                    <br />
+                    <div>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i>
+                        </a>
+
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                        </a>
+                    </div>
+                </footer>
+            </main>
+            <div class="overlay"></div>
+        </div>
+
+    </div>
+    <!-- partial -->
+    @*<script src='https://unpkg.com/@popperjs/core@2'></script>*@
+    @*<script src="~/Scripts/umd/popper.min.js"></script>*@
+    <script src="~/Styles/script6.js"></script>
+
+
+
+</body>
+</html>
